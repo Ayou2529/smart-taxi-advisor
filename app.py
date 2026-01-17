@@ -315,8 +315,8 @@ def get_flights():
     })
 
 # ================= LONGDO TRAFFIC API =================
-LONGDO_API_KEY = "40e07fdaa6a0cc5137da6b8ce3ebf055"
-USE_DEMO_TRAFFIC = False  # Now using REAL Longdo Traffic data!
+LONGDO_API_KEY = os.environ.get("LONGDO_API_KEY")
+USE_DEMO_TRAFFIC = os.environ.get("USE_DEMO_TRAFFIC", "True").lower() == "true"  # Now using REAL Longdo Traffic data!
 
 def get_traffic_incidents_demo():
     """Mock traffic data for demo purposes"""
@@ -435,8 +435,8 @@ def get_traffic():
     })
 
 # ================= FACEBOOK TRAFFIC NEWS API =================
-FACEBOOK_ACCESS_TOKEN = "EAAdJlLvWHb8BQV9KmMLu1FHYWRFw6LckdENOylZATD45HnYZCXZAuIHKJ38RFyQHoei56LQ7DrFofqn2JWuIqDUppqNmJL74zP1zZAW6fOdG8gfuTtZAZA3Ot7YJ4ZBg76RibrQebeKqkyHts8jFR89qgIUFZCTHZAG9bR5WOqZBhn5cwTt3XHj8HfGoFfvpgnkr4CCUHlJcOIluDD9wI0ZAuduFz6dsWcFOCErBuJPSZAEVGzwRhjLgY6yfaiw6EdrGO4FyNciG3ModnRDA0a2FUwxxRWQt0IDSl8OsVpkgSxSZAeRmk3SZCUCwZAicdnAGhgjrFO3SdYniX4jQPNz"
-USE_DEMO_NEWS = False  # Now using REAL Facebook data!
+# FACEBOOK_ACCESS_TOKEN already set above
+USE_DEMO_NEWS = os.environ.get("USE_DEMO_NEWS", "True").lower() == "true"
 
 # Reliable Thai Traffic Facebook Pages
 TRAFFIC_PAGES = {
@@ -608,8 +608,8 @@ def get_ev_stations():
     })
 
 # ================= AI AGENT (DeepSeek via OpenRouter) =================
-OPENROUTER_API_KEY = "YOUR_OPENROUTER_KEY_HERE"  # Get from openrouter.ai (FREE)
-USE_AI_AGENT = False  # Set to True when you have API key
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
+USE_AI_AGENT = os.environ.get("USE_AI_AGENT", "False").lower() == "true"
 
 @app.route('/api/search-agent', methods=['POST'])
 def search_agent():
