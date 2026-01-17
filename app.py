@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 from datetime import datetime, timedelta
+import random
 import requests
 import os
 from dotenv import load_dotenv
@@ -11,7 +12,7 @@ app = Flask(__name__)
 application = app  # Alias for Vercel/WSGI compatibility
 
 # ================= CONFIGURATION =================
-# ================= CONFIGURATION =================
+
 LINE_NOTIFY_TOKEN = os.environ.get("LINE_NOTIFY_TOKEN")
 AVIATION_STACK_API_KEY = os.environ.get("AVIATION_STACK_API_KEY")
 NOSTRA_API_KEY = os.environ.get("NOSTRA_API_KEY")
