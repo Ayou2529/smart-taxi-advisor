@@ -1,17 +1,23 @@
 from flask import Flask, render_template, jsonify, request
 from datetime import datetime, timedelta
-import random
 import requests
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file (for local development)
+load_dotenv()
 
 app = Flask(__name__)
+application = app  # Alias for Vercel/WSGI compatibility
 
 # ================= CONFIGURATION =================
-LINE_NOTIFY_TOKEN = "YOUR_LINE_TOKEN_HERE"
-AVIATION_STACK_API_KEY = "003b542bbac8cb2c38d66e2cb0eb85d5"  # FREE: 100 calls/month!
-NOSTRA_API_KEY = "YOUR_NOSTRA_KEY_HERE"  # Not working, use demo
-FACEBOOK_ACCESS_TOKEN = "df252cc40b50adbe204e26706058f645"
-USE_DEMO_DATA = False  # Now using REAL API (with caching!)
-AIRPORT_CODE = "BKK"
+# ================= CONFIGURATION =================
+LINE_NOTIFY_TOKEN = os.environ.get("LINE_NOTIFY_TOKEN")
+AVIATION_STACK_API_KEY = os.environ.get("AVIATION_STACK_API_KEY")
+NOSTRA_API_KEY = os.environ.get("NOSTRA_API_KEY")
+FACEBOOK_ACCESS_TOKEN = os.environ.get("FACEBOOK_ACCESS_TOKEN")
+USE_DEMO_DATA = os.environ.get("USE_DEMO_DATA", "True").lower() == "true"
+AIRPORT_CODE = os.environ.get("AIRPORT_CODE", "BKK")
 # =================================================
 
 # ================= CACHING SYSTEM (SAVE API CALLS!) =================
