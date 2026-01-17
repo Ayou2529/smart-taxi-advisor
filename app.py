@@ -219,6 +219,20 @@ def analyze_flights():
     smart_alerts.sort(key=lambda x: x['exit_time'])
     return smart_alerts, len(flights)
 
+@app.route('/debug')
+def debug_paths():
+    import os
+    files = []
+    for root, dirs, filenames in os.walk('.'):
+        for f in filenames:
+            files.append(os.path.join(root, f))
+    return jsonify({
+        "cwd": os.getcwd(),
+        "files": files,
+        "template_folder": app.template_folder,
+        "static_folder": app.static_folder
+    })
+
 @app.route('/')
 def index():
     return render_template('index.html', airport=AIRPORT_CODE)
