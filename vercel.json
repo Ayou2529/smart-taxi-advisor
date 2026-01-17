@@ -4,7 +4,9 @@
     {
       "src": "app.py",
       "use": "@vercel/python",
-      "config": { "includeFiles": "templates/**" }
+      "config": { 
+        "includeFiles": ["index.html", "templates/**", "ev_stations_data.py", "static/**"]
+      }
     }
   ],
   "routes": [
@@ -13,6 +15,7 @@
       "dest": "app.py"
     }
   ],
+  "functions": {},
   "env": {
     "AVIATION_STACK_API_KEY": "@aviation_stack_api_key",
     "FACEBOOK_ACCESS_TOKEN": "@facebook_access_token",
