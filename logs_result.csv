@@ -1,0 +1,1116 @@
+TimeUTC,timestampInMs,requestPath,requestMethod,requestQueryString,responseStatusCode,requestId,requestUserAgent,level,environment,branch,vercelCache,type,function,host,deploymentDomain,deploymentId,durationMs,region,maxMemoryUsed,memorySize,message,projectId,traceId,sessionId,invocationId,instanceId,concurrency
+2026-01-17 17:33:11,1768671191880,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,jhzng-1768671191505-07e9af541739,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:33:11] ""GET /favicon.ico HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:33:11,1768671191505,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,jhzng-1768671191505-07e9af541739,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,5,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G98SP917VTDYH8X9CV9VF,BZLWZOjTt0Ii,1
+2026-01-17 17:33:10,1768671190264,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,gczpx-1768671189656-edbae913c596,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:33:10,1768671190264,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,gczpx-1768671189656-edbae913c596,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:33:10] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:33:09,1768671189656,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,gczpx-1768671189656-edbae913c596,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,6,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G9778G9DCSA238ZG2P8BC,BZLWZOjTt0Ii,1
+2026-01-17 17:32:58,1768671178761,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/favicon.png,GET,,404,cvsgr-1768671178713-e9e01633db88,vercel-favicon/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:58] ""GET /favicon.png HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:58,1768671178713,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/favicon.png,GET,,404,cvsgr-1768671178713-e9e01633db88,vercel-favicon/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,8,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8VZVNZ6S8C4TBDPKZJ5S,BZLWZOjTt0Ii,1
+2026-01-17 17:32:58,1768671178678,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,cvsgr-1768671178618-c1ff62809ae3,vercel-favicon/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:58] ""GET /favicon.ico HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:58,1768671178618,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,cvsgr-1768671178618-c1ff62809ae3,vercel-favicon/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,7,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8VWZ7RCERP2WKQVF554Z,BZLWZOjTt0Ii,1
+2026-01-17 17:32:58,1768671178499,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,8flnr-1768671178446-c7fd75b922f2,vercel-favicon/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:58,1768671178499,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,8flnr-1768671178446-c7fd75b922f2,vercel-favicon/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:58] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:58,1768671178446,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,8flnr-1768671178446-c7fd75b922f2,vercel-favicon/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,6,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8VQKT2P09XZGQS4F7JHD,BZLWZOjTt0Ii,1
+2026-01-17 17:32:57,1768671177843,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,m6lxd-1768671177798-1e218a30e865,vercel-screenshot/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:57] ""GET /favicon.ico HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177798,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,m6lxd-1768671177798-1e218a30e865,vercel-screenshot/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,5,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8V36YZ1RT5X1TFW73ECQ,BZLWZOjTt0Ii,1
+2026-01-17 17:32:57,1768671177834,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,ldxq8-1768671177781-403cd8a66219,vercel-screenshot/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:57] ""GET /favicon.ico HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177781,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,ldxq8-1768671177781-403cd8a66219,vercel-screenshot/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,5,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8V2W80WNP9DJV454ZMHF,wz1vvPJkFVw5,1
+2026-01-17 17:32:57,1768671177730,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,m6lxd-1768671177594-de98ec86d939,vercel-screenshot/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177731,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,m6lxd-1768671177594-de98ec86d939,vercel-screenshot/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:57] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177594,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,m6lxd-1768671177594-de98ec86d939,vercel-screenshot/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,6,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8TZM78RE73BYK4C2X2NG,wz1vvPJkFVw5,1
+2026-01-17 17:32:57,1768671177718,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,j2vzm-1768671177564-04064a1ccdf0,vercel-screenshot/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177718,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,j2vzm-1768671177564-04064a1ccdf0,vercel-screenshot/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:57] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177564,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,j2vzm-1768671177564-04064a1ccdf0,vercel-screenshot/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,6,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8TZ2HTWFWBCGTB1D5B41,wz1vvPJkFVw5,1
+2026-01-17 17:32:57,1768671177389,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,m5tz5-1768671177316-be81f404a724,vercel-favicon/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177390,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,m5tz5-1768671177316-be81f404a724,vercel-favicon/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:57] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177316,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,m5tz5-1768671177316-be81f404a724,vercel-favicon/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,6,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8TM8N4E2V68QM8NFDAA1,3XO05SyjXYTz,1
+2026-01-17 17:32:57,1768671177371,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,294gr-1768671177225-cca23baef8a5,vercel-favicon/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177372,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,294gr-1768671177225-cca23baef8a5,vercel-favicon/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:57] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177225,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,294gr-1768671177225-cca23baef8a5,vercel-favicon/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,9,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8TM9XQXDMRRW3KYFS62H,3XO05SyjXYTz,1
+2026-01-17 17:32:57,1768671177479,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,rtmws-1768671176261-1207819d5aa6,vercel-screenshot/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177480,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,rtmws-1768671176261-1207819d5aa6,vercel-screenshot/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:57] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:56,1768671176261,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,500,rtmws-1768671176261-1207819d5aa6,vercel-screenshot/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,868,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8SRANVK3P2EGP9XZWS19,wz1vvPJkFVw5,1
+2026-01-17 17:32:57,1768671177463,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,,rdgdp-1768671176201-3f5688d3c42e,vercel-screenshot/1.0,error,production,main,,serverless,,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:57,1768671177464,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,,rdgdp-1768671176201-3f5688d3c42e,vercel-screenshot/1.0,info,production,main,,serverless,,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,,,,,"127.0.0.1 - - [17/Jan/2026 17:32:57] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:32:56,1768671176201,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app/,GET,,,rdgdp-1768671176201-3f5688d3c42e,vercel-screenshot/1.0,,production,main,,serverless,/api/index.py,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-q34pezr67-ayous-projects-19175986.vercel.app,dpl_AwiWbgvCo6x43koujpZZsgU9KptH,854,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6G8SR88SZGF25F4TRX798X,BZLWZOjTt0Ii,1
+2026-01-17 17:26:42,1768670802681,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,wb8bt-1768670802546-a05feeb16004,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:26:42] ""GET /favicon.ico HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:26:42,1768670802546,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,wb8bt-1768670802546-a05feeb16004,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,5,iad1,238,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FXCQ7J0JX53BVBD9K5SY7,3pUDKynFaz7D,1
+2026-01-17 17:26:40,1768670800066,thaismarttaxiadvisorapp.vercel.app/,GET,,500,vvdtw-1768670799903-0fd3fb9ea5cc,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:26:40,1768670800066,thaismarttaxiadvisorapp.vercel.app/,GET,,500,vvdtw-1768670799903-0fd3fb9ea5cc,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:26:40] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:26:39,1768670799903,thaismarttaxiadvisorapp.vercel.app/,GET,,500,vvdtw-1768670799903-0fd3fb9ea5cc,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,5,iad1,238,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FXA5CYQMB53WT3YCY5AAM,3pUDKynFaz7D,1
+2026-01-17 17:26:39,1768670799868,thaismarttaxiadvisorapp.vercel.app/,GET,,500,d9s6h-1768670799868-c50ba1d3fd9b,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:26:39,1768670799278,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app/,GET,,500,gczpx-1768670799141-8e98b3000346,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:26:39,1768670799279,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app/,GET,,500,gczpx-1768670799141-8e98b3000346,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:26:39] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:26:39,1768670799141,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app/,GET,,500,gczpx-1768670799141-8e98b3000346,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app,thaismarttaxiadvisorapp-git-main-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,6,iad1,238,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FX9CXNCZV3VW5X6TB2914,3pUDKynFaz7D,1
+2026-01-17 17:26:37,1768670797527,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,ztzv6-1768670797398-f34e8bed8d42,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:26:37] ""GET /favicon.ico HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:26:37,1768670797398,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,ztzv6-1768670797398-f34e8bed8d42,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,5,iad1,237,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FX7P3BSZEBEBK7P805DYJ,3pUDKynFaz7D,1
+2026-01-17 17:26:35,1768670795615,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,r5d5b-1768670795478-9a206f2d557f,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:26:35,1768670795615,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,r5d5b-1768670795478-9a206f2d557f,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:26:35] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:26:35,1768670795478,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,r5d5b-1768670795478-9a206f2d557f,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,7,iad1,237,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FX5TD0WPDNSDAHH9N82W3,3pUDKynFaz7D,1
+2026-01-17 17:25:26,1768670726610,thaismarttaxiadvisorapp.vercel.app/,GET,,500,8v9zz-1768670726477-c6273eafcb3b,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:25:26,1768670726610,thaismarttaxiadvisorapp.vercel.app/,GET,,500,8v9zz-1768670726477-c6273eafcb3b,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:25:26] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:25:26,1768670726477,thaismarttaxiadvisorapp.vercel.app/,GET,,500,8v9zz-1768670726477-c6273eafcb3b,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,7,iad1,237,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FV2E11PR0YZ3FNDKS7JJV,3pUDKynFaz7D,1
+2026-01-17 17:25:26,1768670726441,thaismarttaxiadvisorapp.vercel.app/,GET,,500,s8jsh-1768670726441-5cbaaa67e7a5,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:25:11,1768670711055,thaismarttaxiadvisorapp.vercel.app/,GET,,,qpzpq-1768670710908-79d36477e1e9,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",error,production,main,,serverless,,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:25:11,1768670711056,thaismarttaxiadvisorapp.vercel.app/,GET,,,qpzpq-1768670710908-79d36477e1e9,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,,serverless,,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:25:11] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:25:10,1768670710908,thaismarttaxiadvisorapp.vercel.app/,GET,,,qpzpq-1768670710908-79d36477e1e9,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,6,iad1,237,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FTK7VTQFA24GBXSVXR974,3pUDKynFaz7D,1
+2026-01-17 17:25:10,1768670710601,thaismarttaxiadvisorapp.vercel.app/,GET,,500,pzpf4-1768670710601-382a99f15cab,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:24:49,1768670689210,thaismarttaxiadvisorapp.vercel.app/,GET,,500,jxlwt-1768670688792-9b97da55ed7a,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:24:49,1768670689210,thaismarttaxiadvisorapp.vercel.app/,GET,,500,jxlwt-1768670688792-9b97da55ed7a,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:24:49] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:24:48,1768670688792,thaismarttaxiadvisorapp.vercel.app/,GET,,500,jxlwt-1768670688792-9b97da55ed7a,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,9,iad1,237,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FSXWVD5J24P217ZVM99BX,3pUDKynFaz7D,1
+2026-01-17 17:24:48,1768670688524,thaismarttaxiadvisorapp.vercel.app/,GET,,500,j5tzr-1768670688524-2aa4c837bf11,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:20:31,1768670431290,thaismarttaxiadvisorapp.vercel.app/,GET,,500,bqhvp-1768670430639-6785c8d6dfe9,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:20:31,1768670431290,thaismarttaxiadvisorapp.vercel.app/,GET,,500,bqhvp-1768670430639-6785c8d6dfe9,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:20:31] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:20:30,1768670430639,thaismarttaxiadvisorapp.vercel.app/,GET,,500,bqhvp-1768670430639-6785c8d6dfe9,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,9,iad1,236,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FJ21AREBZV00WXZQ2K5VG,3pUDKynFaz7D,1
+2026-01-17 17:20:30,1768670430318,thaismarttaxiadvisorapp.vercel.app/,GET,,500,ztzv6-1768670430318-dabdedfb1669,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:52,1768670332005,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/favicon.png,GET,,404,bd8f8-1768670331941-7a626de45e86,vercel-favicon/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:18:52] ""GET /favicon.png HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:51,1768670331941,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/favicon.png,GET,,404,bd8f8-1768670331941-7a626de45e86,vercel-favicon/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,5,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FF12PS5PWWF6RYJ2KXQ64,3pUDKynFaz7D,1
+2026-01-17 17:18:51,1768670331907,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,bd8f8-1768670331860-663b3f1282ba,vercel-favicon/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:18:51] ""GET /favicon.ico HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:51,1768670331860,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,bd8f8-1768670331860-663b3f1282ba,vercel-favicon/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,5,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FF0ZN5MJC7SK65VPEFVSF,3pUDKynFaz7D,1
+2026-01-17 17:18:51,1768670331758,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,bd8f8-1768670331703-b983503e8224,vercel-favicon/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:51,1768670331759,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,bd8f8-1768670331703-b983503e8224,vercel-favicon/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:18:51] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:51,1768670331703,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,bd8f8-1768670331703-b983503e8224,vercel-favicon/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,7,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FF0TYB2C8ACA5S9WDKZEB,3pUDKynFaz7D,1
+2026-01-17 17:18:50,1768670330653,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,tsfm4-1768670330495-83bfcc54aa29,vercel-favicon/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:50,1768670330653,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,tsfm4-1768670330495-83bfcc54aa29,vercel-favicon/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:18:50] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:50,1768670330495,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,tsfm4-1768670330495-83bfcc54aa29,vercel-favicon/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,6,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FEZR53X38VFKB42VJBHEG,3pUDKynFaz7D,1
+2026-01-17 17:18:26,1768670306189,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,7mp54-1768670306139-9479fce225e3,vercel-screenshot/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:18:26] ""GET /favicon.ico HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:26,1768670306139,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/favicon.ico,GET,,404,7mp54-1768670306139-9479fce225e3,vercel-screenshot/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,5,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FE7VW1825F0T63BQHMB9C,3pUDKynFaz7D,1
+2026-01-17 17:18:26,1768670306079,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/favicon.ico,GET,,,rhcq6-1768670306024-98a9717c7d72,vercel-screenshot/1.0,info,production,main,,serverless,,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:18:26] ""GET /favicon.ico HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:26,1768670306024,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/favicon.ico,GET,,,rhcq6-1768670306024-98a9717c7d72,vercel-screenshot/1.0,,production,main,,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,5,iad1,233,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FE7RBJCZ777V4EATD0PR3,3pUDKynFaz7D,1
+2026-01-17 17:18:26,1768670306069,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,7mp54-1768670305884-6d471def71e6,vercel-screenshot/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:26,1768670306069,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,7mp54-1768670305884-6d471def71e6,vercel-screenshot/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:18:26] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:25,1768670305884,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,7mp54-1768670305884-6d471def71e6,vercel-screenshot/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,6,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FE7R13FH77994FW5R4FN8,ZiqDh4KBCy4g,1
+2026-01-17 17:18:25,1768670305962,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,,rhcq6-1768670305814-3ff8007c535a,vercel-screenshot/1.0,error,production,main,,serverless,,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:25,1768670305963,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,,rhcq6-1768670305814-3ff8007c535a,vercel-screenshot/1.0,info,production,main,,serverless,,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:18:25] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:25,1768670305814,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,,rhcq6-1768670305814-3ff8007c535a,vercel-screenshot/1.0,,production,main,,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,7,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FE7MQ9HNHTW83SRZB5S24,ZiqDh4KBCy4g,1
+2026-01-17 17:18:25,1768670305771,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,fwg2r-1768670304575-aecf6c9ab8d8,vercel-screenshot/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:25,1768670305771,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,fwg2r-1768670304575-aecf6c9ab8d8,vercel-screenshot/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:18:25] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:24,1768670304575,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,fwg2r-1768670304575-aecf6c9ab8d8,vercel-screenshot/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,859,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FE6FXNK8RNFCYCT511789,ZiqDh4KBCy4g,1
+2026-01-17 17:18:25,1768670305707,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,wqb6b-1768670304496-62d8f56c47c4,vercel-screenshot/1.0,error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:25,1768670305707,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,wqb6b-1768670304496-62d8f56c47c4,vercel-screenshot/1.0,info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,,,,,"127.0.0.1 - - [17/Jan/2026 17:18:25] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:18:24,1768670304496,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app/,GET,,500,wqb6b-1768670304496-62d8f56c47c4,vercel-screenshot/1.0,,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,thaismarttaxiadvisor-nz48egido-ayous-projects-19175986.vercel.app,dpl_B5wTxoUZeusghko9gVK8emwS6cys,718,iad1,233,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6FE6FRN09D0CE3CK9SYT4Q,3pUDKynFaz7D,1
+2026-01-17 17:11:17,1768669877341,thaismarttaxiadvisorapp.vercel.app/,GET,,,dsjlh-1768669877216-0fec6953f2f1,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",error,production,main,,serverless,,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:17,1768669877341,thaismarttaxiadvisorapp.vercel.app/,GET,,,dsjlh-1768669877216-0fec6953f2f1,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",info,production,main,,serverless,,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"127.0.0.1 - - [17/Jan/2026 17:11:17] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:17,1768669877216,thaismarttaxiadvisorapp.vercel.app/,GET,,,dsjlh-1768669877216-0fec6953f2f1,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,6,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6F152EG4MCSAH4N1VP2VPF,Pr8GaYK8Hsjx,1
+2026-01-17 17:11:17,1768669877188,thaismarttaxiadvisorapp.vercel.app/,GET,,500,fkw4f-1768669877188-f0f128bace61,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-b9gn17xwr-ayous-projects-19175986.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:16,1768669876295,thaismarttaxiadvisorapp.vercel.app/,GET,,500,vvdtw-1768669876158-bc9869cc79c3,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:16,1768669876295,thaismarttaxiadvisorapp.vercel.app/,GET,,500,vvdtw-1768669876158-bc9869cc79c3,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"127.0.0.1 - - [17/Jan/2026 17:11:16] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:16,1768669876158,thaismarttaxiadvisorapp.vercel.app/,GET,,500,vvdtw-1768669876158-bc9869cc79c3,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,8,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6F141PRWJKS1567JTM6ERT,Pr8GaYK8Hsjx,1
+2026-01-17 17:11:16,1768669876127,thaismarttaxiadvisorapp.vercel.app/,GET,,500,4wclr-1768669876127-430a0f4884b7,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-b9gn17xwr-ayous-projects-19175986.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:14,1768669874158,thaismarttaxiadvisorapp.vercel.app/,GET,,500,sf8f4-1768669874019-f11c1c862ec2,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:14,1768669874158,thaismarttaxiadvisorapp.vercel.app/,GET,,500,sf8f4-1768669874019-f11c1c862ec2,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"127.0.0.1 - - [17/Jan/2026 17:11:14] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:14,1768669874019,thaismarttaxiadvisorapp.vercel.app/,GET,,500,sf8f4-1768669874019-f11c1c862ec2,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,14,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6F11YP13M1VYS6JSJD30J1,Pr8GaYK8Hsjx,1
+2026-01-17 17:11:13,1768669873990,thaismarttaxiadvisorapp.vercel.app/,GET,,500,gntl4-1768669873990-fa69487ded57,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-b9gn17xwr-ayous-projects-19175986.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:06,1768669866543,thaismarttaxiadvisorapp.vercel.app/,GET,,500,84qsc-1768669866416-6a0f51fcd2b9,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:06,1768669866543,thaismarttaxiadvisorapp.vercel.app/,GET,,500,84qsc-1768669866416-6a0f51fcd2b9,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"127.0.0.1 - - [17/Jan/2026 17:11:06] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:06,1768669866416,thaismarttaxiadvisorapp.vercel.app/,GET,,500,84qsc-1768669866416-6a0f51fcd2b9,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,5,iad1,235,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6F0TGXZD480TAT0B04V47F,Pr8GaYK8Hsjx,1
+2026-01-17 17:11:06,1768669866390,thaismarttaxiadvisorapp.vercel.app/,GET,,500,gntl4-1768669866390-1b78858196dc,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-b9gn17xwr-ayous-projects-19175986.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:04,1768669864851,thaismarttaxiadvisorapp.vercel.app/favicon.ico,GET,,404,98f8t-1768669864685-9c3e81601747,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"127.0.0.1 - - [17/Jan/2026 17:11:04] ""GET /favicon.ico HTTP/1.1"" 404 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:04,1768669864685,thaismarttaxiadvisorapp.vercel.app/favicon.ico,GET,,404,98f8t-1768669864685-9c3e81601747,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,5,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6F0RVYKC5AQXZZ5SQKFYRQ,Pr8GaYK8Hsjx,1
+2026-01-17 17:11:04,1768669864264,thaismarttaxiadvisorapp.vercel.app/,GET,,500,mwvkb-1768669863102-7acc655ad913,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:04,1768669864264,thaismarttaxiadvisorapp.vercel.app/,GET,,500,mwvkb-1768669863102-7acc655ad913,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"127.0.0.1 - - [17/Jan/2026 17:11:04] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:11:03,1768669863102,thaismarttaxiadvisorapp.vercel.app/,GET,,500,mwvkb-1768669863102-7acc655ad913,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,846,iad1,234,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6F0Q9D58JYGZQA4S0DNDVJ,Pr8GaYK8Hsjx,1
+2026-01-17 17:11:03,1768669863073,thaismarttaxiadvisorapp.vercel.app/,GET,,500,lv66t-1768669863073-03e3eb0af685,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-b9gn17xwr-ayous-projects-19175986.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:08:43,1768669723303,thaismarttaxiadvisorapp.vercel.app/,GET,,500,j5tzr-1768669722087-e77bb46e74af,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",error,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"Exception on / [GET]
+Traceback (most recent call last):
+  File ""/var/task/_vendor/flask/app.py"", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/app.py"", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/api/index.py"", line 218, in index
+    return render_template('index.html', airport=AIRPORT_CODE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/environment.py"", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/jinja2/loaders.py"", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/var/task/_vendor/flask/templating.py"", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:08:43,1768669723304,thaismarttaxiadvisorapp.vercel.app/,GET,,500,j5tzr-1768669722087-e77bb46e74af,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",info,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,"127.0.0.1 - - [17/Jan/2026 17:08:43] ""GET / HTTP/1.1"" 500 -",prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,
+2026-01-17 17:08:42,1768669722087,thaismarttaxiadvisorapp.vercel.app/,GET,,500,j5tzr-1768669722087-e77bb46e74af,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/api/index.py,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisorapp.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,874,iad1,233,2048,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,01KF6EWDK0B9CBDP5WGHKCAESB,yE3qdVCwLcaT,1
+2026-01-17 17:08:42,1768669722017,thaismarttaxiadvisorapp.vercel.app/,GET,,500,b7r8f-1768669722017-1ecc3ba97b99,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,,/,thaismarttaxiadvisorapp.vercel.app,thaismarttaxiadvisor-b9gn17xwr-ayous-projects-19175986.vercel.app,dpl_CAeDvKwHhLRto2KfT7pjuvMzkRin,,,,,,prj_H5A0F0p8YLEpUcsm47KZer81oBM8,,,,,

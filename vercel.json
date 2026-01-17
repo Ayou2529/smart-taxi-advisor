@@ -2,20 +2,19 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
+      "src": "api/index.py",
       "use": "@vercel/python",
       "config": { 
-        "includeFiles": ["index.html", "templates/**", "ev_stations_data.py", "static/**"]
+        "includeFiles": ["app.py", "index.html", "templates/**", "ev_stations_data.py", "static/**"]
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "api/index.py"
     }
   ],
-  "functions": {},
   "env": {
     "AVIATION_STACK_API_KEY": "@aviation_stack_api_key",
     "FACEBOOK_ACCESS_TOKEN": "@facebook_access_token",
