@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file (for local development)
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 application = app  # Alias for Vercel/WSGI compatibility
 
 # ================= CONFIGURATION =================
