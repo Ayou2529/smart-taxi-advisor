@@ -1,17 +1,18 @@
-from flask import Flask, render_template, jsonify, request
+﻿from flask import Flask, render_template, jsonify, request
 from datetime import datetime, timedelta
 import random
 import requests
+import os
 
 app = Flask(__name__)
 
 # ================= CONFIGURATION =================
-LINE_NOTIFY_TOKEN = "YOUR_LINE_TOKEN_HERE"
-AVIATION_STACK_API_KEY = "003b542bbac8cb2c38d66e2cb0eb85d5"  # FREE: 100 calls/month!
-NOSTRA_API_KEY = "YOUR_NOSTRA_KEY_HERE"  # Not working, use demo
-FACEBOOK_ACCESS_TOKEN = "df252cc40b50adbe204e26706058f645"
-USE_DEMO_DATA = False  # Now using REAL API (with caching!)
-AIRPORT_CODE = "BKK"
+LINE_NOTIFY_TOKEN = os.environ.get("LINE_NOTIFY_TOKEN", "YOUR_LINE_TOKEN_HERE")
+AVIATION_STACK_API_KEY = os.environ.get("AVIATION_STACK_API_KEY", "003b542bbac8cb2c38d66e2cb0eb85d5")  # FREE: 100 calls/month!
+NOSTRA_API_KEY = os.environ.get("NOSTRA_API_KEY", "YOUR_NOSTRA_KEY_HERE")  # Not working, use demo
+FACEBOOK_ACCESS_TOKEN = os.environ.get("FACEBOOK_ACCESS_TOKEN", "EAAdJlLvWHb8BQV9KmMLu1FHYWRFw6LckdENOylZATD45HnYZCXZAuIHKJ38RFyQHoei56LQ7DrFofqn2JWuIqDUppqNmJL74zP1zZAW6fOdG8gfuTtZAZA3Ot7YJ4ZBg76RibrQebeKqkyHts8jFR89qgIUFZCTHZAG9bR5WOqZBhn5cwTt3XHj8HfGoFfvpgnkr4CCUHlJcOIluDD9wI0ZAuduFz6dsWcFOCErBuJPSZAEVGzwRhjLgY6yfaiw6EdrGO4FyNciG3ModnRDA0a2FUwxxRWQt0IDSl8OsVpkgSxSZAeRmk3SZCUCwZAicdnAGhgjrFO3SdYniX4jQPNz")
+USE_DEMO_DATA = os.environ.get("USE_DEMO_DATA", "False").lower() == "true"  # Now using REAL API (with caching!)
+AIRPORT_CODE = os.environ.get("AIRPORT_CODE", "BKK")
 # =================================================
 
 # ================= CACHING SYSTEM (SAVE API CALLS!) =================
@@ -36,7 +37,7 @@ def set_cache(key, data):
     CACHE[key]["data"] = data
     CACHE[key]["expires"] = datetime.now() + timedelta(minutes=CACHE_DURATION_MINUTES)
     API_CALL_COUNT[key] += 1
-    print(f"🔄 API Call #{API_CALL_COUNT[key]} for {key} (cached for {CACHE_DURATION_MINUTES} mins)")
+    print(f"๐” API Call #{API_CALL_COUNT[key]} for {key} (cached for {CACHE_DURATION_MINUTES} mins)")
 # ===================================================================
 
 FLIGHT_PROFILE = {
@@ -44,48 +45,48 @@ FLIGHT_PROFILE = {
         "hubs": ["London", "Frankfurt", "Paris", "Zurich", "Munich", "Amsterdam", "Helsinki", "Copenhagen"],
         "exit_delay": 50,
         "fare_range": "500-800",
-        "comment": "กระเป๋าเยอะ เข้าเมืองไกล (สุขุมวิท/สีลม)",
-        "icon": "💶",
+        "comment": "เธเธฃเธฐเน€เธเนเธฒเน€เธขเธญเธฐ เน€เธเนเธฒเน€เธกเธทเธญเธเนเธเธฅ (เธชเธธเธเธธเธกเธงเธดเธ—/เธชเธตเธฅเธม)",
+        "icon": "๐’ถ",
         "color": "#3B82F6"
     },
     "MiddleEast": {
         "hubs": ["Dubai", "Doha", "Abu Dhabi", "Istanbul", "Tel Aviv", "Riyadh", "Kuwait"],
         "exit_delay": 60,
         "fare_range": "450-650",
-        "comment": "มาเป็นครอบครัวใหญ่ ทิปหนัก (โซนนานา)",
-        "icon": "🛢️",
+        "comment": "เธกเธฒเน€เธเนเธเธเธฃเธญเธเธเธฃเธฑเธงเนเธซเธญเน เธ—เธดเธเธซเธเธฑเธ (เนเธเธเธเธฒเธเธฒ)",
+        "icon": "๐ข๏ธ",
         "color": "#F59E0B"
     },
     "Russia": {
         "hubs": ["Moscow", "Saint Petersburg", "Novosibirsk"],
         "exit_delay": 55,
         "fare_range": "500-1500",
-        "comment": "โอกาสเหมาไปพัทยา/หัวหินสูงมาก",
-        "icon": "🇷🇺",
+        "comment": "เนเธญเธเธฒเธชเน€เธซเธกเธฒเนเธเธเธฑเธ—เธขเธฒ/เธซเธฑเธงเธซเธดเธเธชเธนเธเธกเธฒเธ",
+        "icon": "๐ท๐บ",
         "color": "#EF4444"
     },
     "EastAsia": {
         "hubs": ["Tokyo", "Osaka", "Seoul", "Taipei"],
         "exit_delay": 45,
         "fare_range": "400-550",
-        "comment": "สุภาพ จ่ายตรง (แต่อาจจะใช้ App เรียกรถ)",
-        "icon": "🇯🇵",
+        "comment": "เธชเธธเธ เธฒเธ เธเนเธฒเธขเธ•เธฃเธ (เนเธ•เนเธญเธฒเธเธเธฐเนเธเน App เน€เธฃเธตเธขเธเธฃเธ–)",
+        "icon": "๐ฏ๐ต",
         "color": "#EC4899"
     },
     "China": {
         "hubs": ["Shanghai", "Beijing", "Guangzhou", "Chengdu", "Kunming"],
         "exit_delay": 75,
         "fare_range": "350-500",
-        "comment": "ระวัง! รอนานตรวจวีซ่า (ไปโซนรัชดา)",
-        "icon": "🇨🇳",
+        "comment": "เธฃเธฐเธงเธฑเธ! เธฃเธญเธเธฒเธเธ•เธฃเธงเธเธงเธตเธเนเธฒ (เนเธเนเธเธเธฃเธฑเธเธ”เธฒ)",
+        "icon": "๐จ๐ณ",
         "color": "#F97316"
     },
     "India": {
         "hubs": ["Delhi", "Mumbai", "Kolkata", "Bangalore"],
         "exit_delay": 70,
         "fare_range": "350-500",
-        "comment": "ไปโซนประตูน้ำ/พาหุรัด",
-        "icon": "🇮🇳",
+        "comment": "เนเธเนเธเธเธเธฃเธฐเธ•เธนเธเนเธณ/เธเธฒเธซเธธเธฃเธฑเธ”",
+        "icon": "๐ฎ๐ณ",
         "color": "#22C55E"
     }
 }
@@ -113,7 +114,7 @@ def get_flight_data_real():
     # Check cache first to save API calls!
     cached = get_cached("flights")
     if cached:
-        print("✅ Using cached flight data (no API call)")
+        print("โ… Using cached flight data (no API call)")
         return cached
     
     try:
@@ -129,7 +130,7 @@ def get_flight_data_real():
         
         # Check for API errors (e.g., quota exceeded)
         if 'error' in data:
-            print(f"⚠️ AviationStack Error: {data['error'].get('message', 'Unknown')}")
+            print(f"โ ๏ธ AviationStack Error: {data['error'].get('message', 'Unknown')}")
             return get_flight_data_demo()
         
         real_flights = []
@@ -154,7 +155,7 @@ def get_flight_data_real():
             return get_flight_data_demo()
             
     except Exception as e:
-        print(f"⚠️ API Error: {e} (Switching to Demo Data)")
+        print(f"โ ๏ธ API Error: {e} (Switching to Demo Data)")
         return get_flight_data_demo()
 
 def analyze_flights():
@@ -248,7 +249,7 @@ def get_flights():
             "fare_range": "300-500",
             "fare_min": 300,
             "fare_max": 500,
-            "icon": "🎸",
+            "icon": "๐ธ",
             "lat": 13.911,
             "lng": 100.550
         },
@@ -261,7 +262,7 @@ def get_flights():
             "fare_range": "200-400",
             "fare_min": 200,
             "fare_max": 400,
-            "icon": "🚗",
+            "icon": "๐—",
             "lat": 13.669,
             "lng": 100.610
         },
@@ -274,7 +275,7 @@ def get_flights():
             "fare_range": "400-800",
             "fare_min": 400,
             "fare_max": 800,
-            "icon": "🏟️",
+            "icon": "๐๏ธ",
             "lat": 13.755,
             "lng": 100.622
         }
@@ -291,11 +292,11 @@ def get_flights():
             avg_fare = (event['fare_min'] + event['fare_max']) / 2
             score = avg_fare - (dist * 5)
             event['score'] = score
-            event['note'] = f"ห่าง {dist:.1f} กม."
+            event['note'] = f"เธซเนเธฒเธ {dist:.1f} เธเธก."
         else:
             event['distance'] = None
             event['score'] = 0
-            event['note'] = "ไม่ทราบพิกัด"
+            event['note'] = "เนเธกเนเธ—เธฃเธฒเธเธเธดเธเธฑเธ”"
             
         city_alerts.append(event)
 
@@ -315,17 +316,17 @@ def get_flights():
     })
 
 # ================= LONGDO TRAFFIC API =================
-LONGDO_API_KEY = "40e07fdaa6a0cc5137da6b8ce3ebf055"
-USE_DEMO_TRAFFIC = False  # Now using REAL Longdo Traffic data!
+LONGDO_API_KEY = os.environ.get("LONGDO_API_KEY", "40e07fdaa6a0cc5137da6b8ce3ebf055")
+USE_DEMO_TRAFFIC = os.environ.get("USE_DEMO_TRAFFIC", "False").lower() == "true"  # Now using REAL Longdo Traffic data!
 
 def get_traffic_incidents_demo():
     """Mock traffic data for demo purposes"""
     return [
         {
             "type": "accident",
-            "icon": "🚗💥",
-            "title": "อุบัติเหตุรถชนกัน",
-            "location": "ถนนพระราม 2 ขาออก กม.15",
+            "icon": "๐—๐’ฅ",
+            "title": "เธญเธธเธเธฑเธ•เธดเน€เธซเธ•เธธเธฃเธ–เธเธเธเธฑเธ",
+            "location": "เธ–เธเธเธเธฃเธฐเธฃเธฒเธก 2 เธเธฒเธญเธญเธ เธเธก.15",
             "lat": 13.627,
             "lng": 100.415,
             "time": "18:30",
@@ -333,9 +334,9 @@ def get_traffic_incidents_demo():
         },
         {
             "type": "construction",
-            "icon": "🚧",
-            "title": "ซ่อมถนน",
-            "location": "ทางด่วนศรีรัช ขาเข้า",
+            "icon": "๐ง",
+            "title": "เธเนเธญเธกเธ–เธเธ",
+            "location": "เธ—เธฒเธเธ”เนเธงเธเธจเธฃเธตเธฃเธฑเธ เธเธฒเน€เธเนเธฒ",
             "lat": 13.780,
             "lng": 100.540,
             "time": "06:00-22:00",
@@ -343,9 +344,9 @@ def get_traffic_incidents_demo():
         },
         {
             "type": "flood",
-            "icon": "🌊",
-            "title": "น้ำท่วมขัง",
-            "location": "แยกอโศก ถนนสุขุมวิท",
+            "icon": "๐",
+            "title": "เธเนเธณเธ—เนเธงเธกเธเธฑเธ",
+            "location": "เนเธขเธเธญเนเธจเธ เธ–เธเธเธชเธธเธเธธเธกเธงเธดเธ—",
             "lat": 13.737,
             "lng": 100.560,
             "time": "19:00",
@@ -353,9 +354,9 @@ def get_traffic_incidents_demo():
         },
         {
             "type": "broken_vehicle",
-            "icon": "🚙⚠️",
-            "title": "รถเสียจอดขวางทาง",
-            "location": "ทางด่วนบูรพาวิถี กม.8",
+            "icon": "๐โ ๏ธ",
+            "title": "เธฃเธ–เน€เธชเธตเธขเธเธญเธ”เธเธงเธฒเธเธ—เธฒเธ",
+            "location": "เธ—เธฒเธเธ”เนเธงเธเธเธนเธฃเธเธฒเธงเธดเธ—เธต เธเธก.8",
             "lat": 13.720,
             "lng": 100.620,
             "time": "19:15",
@@ -392,9 +393,9 @@ def get_traffic_incidents_real():
             for item in res_acc['data']:
                 incidents.append({
                     "type": "accident",
-                    "icon": "🚗�",
-                    "title": item.get('name', 'อุบัติเหตุ'),
-                    "location": item.get('address', 'ไม่ระบุ'),
+                    "icon": "๐—๏ฟฝ",
+                    "title": item.get('name', 'เธญเธธเธเธฑเธ•เธดเน€เธซเธ•เธธ'),
+                    "location": item.get('address', 'เนเธกเนเธฃเธฐเธเธธ'),
                     "lat": item.get('lat', 0),
                     "lng": item.get('lon', 0),
                     "time": "Today",
@@ -406,19 +407,19 @@ def get_traffic_incidents_real():
             for item in res_con['data']:
                 incidents.append({
                     "type": "construction",
-                    "icon": "🚧",
-                    "title": item.get('name', 'งานก่อสร้าง'),
-                    "location": item.get('address', 'ไม่ระบุ'),
+                    "icon": "๐ง",
+                    "title": item.get('name', 'เธเธฒเธเธเนเธญเธชเธฃเนเธฒเธ'),
+                    "location": item.get('address', 'เนเธกเนเธฃเธฐเธเธธ'),
                     "lat": item.get('lat', 0),
                     "lng": item.get('lon', 0),
                     "time": "Ongoing",
                     "severity": "medium"
                 })
 
-        return incidents if incidents else [{"type": "info", "icon": "✅", "title": "No Incidents", "location": "Traffic Clear", "time": "Now", "severity": "low"}]
+        return incidents if incidents else [{"type": "info", "icon": "โ…", "title": "No Incidents", "location": "Traffic Clear", "time": "Now", "severity": "low"}]
     except Exception as e:
-        print(f"⚠️ Longdo API Error: {e}")
-        return [{"type": "error", "icon": "❌", "title": "API Error", "location": str(e), "time": "Now", "severity": "high"}]
+        print(f"โ ๏ธ Longdo API Error: {e}")
+        return [{"type": "error", "icon": "โ", "title": "API Error", "location": str(e), "time": "Now", "severity": "high"}]
 
 @app.route('/api/traffic')
 def get_traffic():
@@ -435,25 +436,25 @@ def get_traffic():
     })
 
 # ================= FACEBOOK TRAFFIC NEWS API =================
-FACEBOOK_ACCESS_TOKEN = "EAAdJlLvWHb8BQV9KmMLu1FHYWRFw6LckdENOylZATD45HnYZCXZAuIHKJ38RFyQHoei56LQ7DrFofqn2JWuIqDUppqNmJL74zP1zZAW6fOdG8gfuTtZAZA3Ot7YJ4ZBg76RibrQebeKqkyHts8jFR89qgIUFZCTHZAG9bR5WOqZBhn5cwTt3XHj8HfGoFfvpgnkr4CCUHlJcOIluDD9wI0ZAuduFz6dsWcFOCErBuJPSZAEVGzwRhjLgY6yfaiw6EdrGO4FyNciG3ModnRDA0a2FUwxxRWQt0IDSl8OsVpkgSxSZAeRmk3SZCUCwZAicdnAGhgjrFO3SdYniX4jQPNz"
-USE_DEMO_NEWS = False  # Now using REAL Facebook data!
+# FACEBOOK_ACCESS_TOKEN already set above
+USE_DEMO_NEWS = os.environ.get("USE_DEMO_NEWS", "False").lower() == "true"  # Now using REAL Facebook data!
 
 # Reliable Thai Traffic Facebook Pages
 TRAFFIC_PAGES = {
     "js100": {
         "page_id": "js100radio",
-        "name": "จส.100",
-        "icon": "📻"
+        "name": "เธเธช.100",
+        "icon": "๐“ป"
     },
     "fm91": {
         "page_id": "fm91trafficpro",
-        "name": "FM91 สวพ.",
-        "icon": "🚨"
+        "name": "FM91 เธชเธงเธ.",
+        "icon": "๐จ"
     },
     "highway": {
         "page_id": "HighwayPolice1193",
-        "name": "ตำรวจทางหลวง",
-        "icon": "🚔"
+        "name": "เธ•เธณเธฃเธงเธเธ—เธฒเธเธซเธฅเธงเธงเธ",
+        "icon": "๐”"
     }
 }
 
@@ -465,30 +466,30 @@ def get_facebook_news_demo():
     
     return [
         {
-            "source": "จส.100",
-            "icon": "📻",
-            "message": f"🚗💥 อุบัติเหตุรถชนกัน 3 คัน บริเวณทางด่วนศรีรัช ขาออก กม.15 รถติดหนัก แนะนำใช้เส้นทางอื่น",
+            "source": "เธเธช.100",
+            "icon": "๐“ป",
+            "message": f"๐—๐’ฅ เธญเธธเธเธฑเธ•เธดเน€เธซเธ•เธธเธฃเธ–เธเธเธเธฑเธ 3 เธเธฑเธ เธเธฃเธดเน€เธงเธเธ—เธฒเธเธ”เนเธงเธเธจเธฃเธตเธฃเธฑเธ เธเธฒเธญเธญเธ เธเธก.15 เธฃเธ–เธ•เธดเธ”เธซเธเธฑเธ เนเธเธฐเธเธณเนเธเนเน€เธชเนเธเธ—เธฒเธเธญเธทเนเธ",
             "time": f"{current_hour-1:02}:30",
             "date": today
         },
         {
-            "source": "FM91 สวพ.",
-            "icon": "🚨",
-            "message": f"🌧️ ฝนตกหนักบริเวณถนนวิภาวดี ขาเข้า น้ำเริ่มท่วมขัง ขับขี่ระวัง",
+            "source": "FM91 เธชเธงเธ.",
+            "icon": "๐จ",
+            "message": f"๐ง๏ธ เธเธเธ•เธเธซเธเธฑเธเธเธฃเธดเน€เธงเธเธ–เธเธเธงเธดเธ เธฒเธงเธ”เธต เธเธฒเน€เธเนเธฒ เธเนเธณเน€เธฃเธดเนเธกเธ—เนเธงเธกเธเธฑเธ เธเธฑเธเธเธตเนเธฃเธฐเธงเธฑเธ",
             "time": f"{current_hour:02}:15",
             "date": today
         },
         {
-            "source": "ตำรวจทางหลวง",
-            "icon": "🚔",
-            "message": f"🚧 ปิดซ่อมถนน ถนนมิตรภาพ กม.120 เปิดใช้เลนขวาได้เลนเดียว",
+            "source": "เธ•เธณเธฃเธงเธเธ—เธฒเธเธซเธฅเธงเธงเธ",
+            "icon": "๐”",
+            "message": f"๐ง เธเธดเธ”เธเนเธญเธกเธ–เธเธ เธ–เธเธเธกเธดเธ•เธฃเธ เธฒเธ เธเธก.120 เน€เธเธดเธ”เนเธเนเน€เธฅเธเธเธงเธฒเนเธ”เนเน€เธฅเธเน€เธ”เธตเธขเธง",
             "time": f"{current_hour-2:02}:00",
             "date": today
         },
         {
-            "source": "จส.100",
-            "icon": "📻",
-            "message": f"🚙⚠️ รถบรรทุกเสียจอดขวางทาง ถนนพระราม 2 ขาออก กม.32 กู้รถอยู่",
+            "source": "เธเธช.100",
+            "icon": "๐“ป",
+            "message": f"๐โ ๏ธ เธฃเธ–เธเธฃเธฃเธ—เธธเธเน€เธชเธตเธขเธเธญเธ”เธเธงเธฒเธเธ—เธฒเธ เธ–เธเธเธเธฃเธฐเธฃเธฒเธก 2 เธเธฒเธญเธญเธ เธเธก.32 เธเธนเนเธฃเธ–เธญเธขเธนเน",
             "time": f"{current_hour:02}:45",
             "date": today
         }
@@ -530,7 +531,7 @@ def get_facebook_news_real():
         
         return all_posts if all_posts else get_facebook_news_demo()
     except Exception as e:
-        print(f"⚠️ Facebook API Error: {e}")
+        print(f"โ ๏ธ Facebook API Error: {e}")
         return get_facebook_news_demo()
 
 @app.route('/api/news')
@@ -582,7 +583,7 @@ def get_ev_stations():
             station_copy['distance_str'] = f"{dist:.1f} km"
         else:
             station_copy['distance'] = 999  # Default far distance
-            station_copy['distance_str'] = "ไม่ทราบระยะทาง"
+            station_copy['distance_str'] = "เนเธกเนเธ—เธฃเธฒเธเธฃเธฐเธขเธฐเธ—เธฒเธ"
         
         # Calculate price score (lower peak price = better)
         peak_price = float(station['pricing']['peak'].split()[0])
@@ -608,14 +609,14 @@ def get_ev_stations():
     })
 
 # ================= AI AGENT (DeepSeek via OpenRouter) =================
-OPENROUTER_API_KEY = "YOUR_OPENROUTER_KEY_HERE"  # Get from openrouter.ai (FREE)
-USE_AI_AGENT = False  # Set to True when you have API key
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "YOUR_OPENROUTER_KEY_HERE")
+USE_AI_AGENT = os.environ.get("USE_AI_AGENT", "False").lower() == "true"
 
 @app.route('/api/search-agent', methods=['POST'])
 def search_agent():
     """AI-powered location search assistant"""
     if not USE_AI_AGENT:
-        return jsonify({"advice": "ฟีเจอร์นี้ต้องการ OpenRouter API Key", "type": "error"})
+        return jsonify({"advice": "เธเธตเน€เธเธญเธฃเนเธเธตเนเธ•เนเธญเธเธเธฒเธฃ OpenRouter API Key", "type": "error"})
     
     user_query = request.json.get('query', '')
     driver_lat = request.json.get('lat')
@@ -627,14 +628,14 @@ def search_agent():
         
         # Build context
         context = f"""
-        คนขับแท็กซี่อยู่ที่: ละติจูด {driver_lat}, ลองจิจูด {driver_lng}
+        เธเธเธเธฑเธเนเธ—เนเธเธเธตเนเธญเธขเธนเนเธ—เธตเน: เธฅเธฐเธ•เธดเธเธนเธ” {driver_lat}, เธฅเธญเธเธเธดเธเธนเธ” {driver_lng}
         
-        เที่ยวบินใกล้เคียง:
-        {[f"{a['flight']} จาก {a['origin']} ออกมา {a['exit_time']}" for a in alerts[:3]]}
+        เน€เธ—เธตเนเธขเธงเธเธดเธเนเธเธฅเนเน€เธเธตเธขเธ:
+        {[f"{a['flight']} เธเธฒเธ {a['origin']} เธญเธญเธเธกเธฒ {a['exit_time']}" for a in alerts[:3]]}
         
-        คำถาม: {user_query}
+        เธเธณเธ–เธฒเธก: {user_query}
         
-        ตอบภาษาไทย สั้นกระชับ (ไม่เกิน 100 คำ):
+        เธ•เธญเธเธ เธฒเธฉเธฒเนเธ—เธข เธชเธฑเนเธเธเธฃเธฐเธเธฑเธ (เนเธกเนเน€เธเธดเธ 100 เธเธณ):
         """
         
         # Call DeepSeek via OpenRouter
@@ -656,12 +657,7 @@ def search_agent():
         
         return jsonify({"advice": advice, "type": "success"})
     except Exception as e:
-        return jsonify({"advice": f"เกิดข้อผิดพลาด: {str(e)}", "type": "error"})
+        return jsonify({"advice": f"เน€เธ เธดเธ”เธเนเธญเธเธดเธ”เธเธฅเธฒเธ”: {str(e)}", "type": "error"})
 
-if __name__ == '__main__':
-    print("🚀 Starting Smart Taxi Advisor Dashboard...")
-    print("📍 Open your browser: http://localhost:5000")
-    print(f"📊 API Usage Monitor: http://localhost:5000/api/usage")
-    print(f"⚡ Cache Duration: {CACHE_DURATION_MINUTES} minutes (saves API calls!)")
-    app.run(debug=True, port=5000)
-
+# Vercel will import this module, so we don't need the main block
+# The app instance will be used directly

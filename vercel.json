@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.py"
+    }
+  ],
+  "env": {
+    "AVIATION_STACK_API_KEY": "@aviation_stack_api_key",
+    "FACEBOOK_ACCESS_TOKEN": "@facebook_access_token",
+    "LONGDO_API_KEY": "@longdo_api_key",
+    "OPENROUTER_API_KEY": "@openrouter_api_key"
+  }
+}
